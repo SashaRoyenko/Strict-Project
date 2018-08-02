@@ -1,0 +1,10 @@
+footer.footer
+    .footer__wrap.container
+        p.footer_copyright
+            | Copyright 2014, STRICT
+        ul.SocialNetworks
+            each val, index in ['facebook', 'twitter', 'gmail', 'linkedin']
+                li.SocialNetworks_item(class='SocialNetworks_item_' + val + '-hover')
+                    |
+                    |
+                    img.SocialNetworks_img(src='static/img/footer/' + val +'.png')

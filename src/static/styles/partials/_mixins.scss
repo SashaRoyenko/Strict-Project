@@ -1,0 +1,47 @@
+@mixin AbsoluteCenter() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin AbsoluteXCenter() {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@mixin AbsoluteYCenter() {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@mixin FlexCenter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin Size($a, $b:false){
+    width:$a + px;
+    @if($b) {
+      height: $b + px;
+    }
+    @else {
+      height: $a + px;
+    }
+}
+body{
+  overflow-x: hidden;
+}
+.container{
+ @include wrapper();
+}
+.btn{
+  border:1px solid #15a4fa;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: .4s;
+  background-color: transparent;
+  &:hover{
+    background-color: #15a4fa;
+  }
+}

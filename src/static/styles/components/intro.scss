@@ -1,0 +1,71 @@
+.intro_s{
+  background-image: url('../img/intro/Intro_bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: calc(100vh - 103px);
+  width: 100%;
+  &__wrap{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+  }
+  &_JumpArrow{
+    cursor: pointer;
+    @include AbsoluteXCenter();
+    bottom: 40px;
+    animation:  jump 1.5s ease-in infinite;
+    @include sm( bottom, 30px);
+  }
+}
+.banner{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  width: 100%;
+  @include sm(max-width, 500px);
+  &_title{
+    font-family: "Lato Bold";
+    text-transform: uppercase;
+    font-size: 120px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    @include sm(font-size, 100px);
+    @include xs(font-size, 60px);
+    &::after{
+      content: '';
+      @include AbsoluteXCenter();
+      bottom: -35px;
+      height: 1px;
+      width: 100%;
+      background-color: #15a4fa;
+      @include xs(bottom, -25px);
+    }
+  }
+  &_content{
+    margin-top: 77px;
+    margin-bottom: 65px;
+    font-family: "Lato Regular";
+    font-size: 20px;
+    text-align: center;
+    @include sm(font-size, 18px);
+    @include xs(font-size, 14px);
+    @include xs(margin-bottom, 50px);
+    @include xs(margin-top, 55px);
+  }
+  &_btn{
+    @include Size(176,54);
+    transition: .4s;
+    &_link{
+      line-height: 54px;
+    }
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}

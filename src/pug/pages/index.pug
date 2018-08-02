@@ -1,0 +1,18 @@
+include ../partials/mixins
+include ../partials/variables
+
+doctype html
+html(lang="ua=UA")
+    head
+        title #{title}
+        meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+        link(rel="stylesheet" type='text/css' href="static/css/main.css")
+    body
+        include ../components/header
+        include ../components/intro
+        include ../components/about_us
+        include ../components/portfolio
+        include ../components/InformUs
+        include ../components/footer
+        script(src='static/js/libs.min.js')
+        script(src='static/js/main.js')

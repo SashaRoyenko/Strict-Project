@@ -1,0 +1,127 @@
+.InformUs{
+  &_s{
+    background-image: url('../img/InformUs/InformUsBg.png');
+    background-repeat: no-repeat;
+    background-size:  cover;
+    background-position: center;
+    height: 105vh;
+    @include sm(height, 105vh);
+    @include xs(height, 105vh);
+    width: 100%;
+    margin-top: 85px;
+    padding-top: 55px;
+    &__wrap{
+    }
+  }
+  &_title, &_description{
+    font-family: "Lato Regular";
+    text-align: center;
+  }
+  &_title{
+    color: #fff;
+    font-size: 41px;
+  }
+  &_description{
+    color: #999999;
+    margin-top: 30px;
+    font-size: 15px;
+  }
+  &_form{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    &BottomArea{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  &_container{
+      margin: 0 auto;
+      max-width: 585px;
+      width: 100%;
+      padding: 0 15px;
+  }
+  &_input{
+    width: 100%;
+    height: 60px;
+    background-color: transparent;
+    border-radius: 3px;
+    border:1px solid #999999;
+    color: #999999;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    font-family: "Lato Regular";
+    font-size: 15px;
+    &::placeholder{
+      color: #999999;
+    }
+    &:focus{
+      color: #fff;
+      border-color: #fff;
+      &::placeholder{
+        color: #fff;
+      }
+    }
+    &Name{
+
+    }
+    &Email{
+
+    }
+    &Message{
+      padding-top: 25px;
+      height: 160px;
+      resize: none;
+    }
+    &Checkbox{
+      display:none;
+      &:checked + {
+          .InformUs_subscribeText::after{
+           opacity: 1;
+        }
+      }
+    }
+  }
+  &_subscribe{
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    &Text{
+      font-family: "Lato Regular";
+      font-size: 15px;
+      color: #fff;
+      position: relative;
+      margin-left: 30px;
+      cursor: pointer;
+      &::before,&::after{
+        content: '';
+        cursor: pointer;
+        position: absolute;
+        @include AbsoluteYCenter();
+        left: -30px;
+        @include Size(15);
+        border-radius: 3px;
+        background: #99a0a9;
+      }
+      &::after{
+        background-image: url("../img/InformUs/checked.png");
+        background-position: center;
+        background-size: 11px;
+        background-repeat: no-repeat;
+        opacity: 0;
+        transition: .1s;
+      }
+    }
+  }
+  &_btn{
+    @include Size(140,45);
+    @include xs(width,115px);
+    @include xs(height,35px);
+    &_link{
+      line-height: 45px;
+      color: #fff;
+      @include xs(line-height,35px);
+    }
+  }
+}

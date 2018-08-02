@@ -1,0 +1,61 @@
+.about_us_s{
+  margin-top: 80px;
+  &__wrap{
+
+  }
+  &_title{
+    font-family: "Lato Regular";
+    font-size: 40px;
+    color: #2d3950;
+    margin-bottom: 35px;
+    text-align: center;
+  }
+  &_description{
+    font-family: "Lato Regular";
+    font-size: 20px;
+    line-height: 32px;
+    color: #999999;
+    text-align: center;
+  }
+}
+.feature{
+  @include row-flex();
+  margin-top: 160px;
+  &_item{
+    @include col();
+    @include size(4);
+    @include size-md(12);
+    @include size-xs(12);
+    @include size-sm(12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+  &_logo{
+    @include Size(100);
+    background: linear-gradient(90deg, #48baff 50%, #5fc3ff 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &_img{
+      width: auto;
+    }
+  }
+  &_title{
+    font-family: "Lato Regular";
+    font-size: 22px;
+    color: #2d3950;
+    margin: 30px 0 25px 0;
+
+  }
+  &_description{
+    font-family: "Lato Regular";
+    font-size: 15px;
+    line-height: 22px;
+    color: #999999;
+    text-align: center;
+    @include xs(font-size, 12px);
+  }
+}
