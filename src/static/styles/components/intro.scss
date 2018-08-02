@@ -16,7 +16,7 @@
     @include AbsoluteXCenter();
     bottom: 40px;
     animation:  jump 1.5s ease-in infinite;
-    @include sm( bottom, 30px);
+    @include md( display, none);
   }
 }
 .banner{

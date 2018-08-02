@@ -4,12 +4,11 @@
     background-repeat: no-repeat;
     background-size:  cover;
     background-position: center;
-    height: 105vh;
-    @include sm(height, 105vh);
-    @include xs(height, 105vh);
+    /*@include sm(height, 105vh);
+    @include xs(height, 105vh);*/
     width: 100%;
     margin-top: 85px;
-    padding-top: 55px;
+    padding: 50px;
     &__wrap{
     }
   }
@@ -30,11 +29,11 @@
     margin-top: 50px;
     display: flex;
     flex-direction: column;
-    &BottomArea{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
+  }
+  &_BottomArea{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
   &_container{
       margin: 0 auto;
