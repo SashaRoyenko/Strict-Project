@@ -1,5 +1,8 @@
 node_modules
 .idea
-build
 .gulp
 task
+gulp
+gulpfile
+package
+package-lock
