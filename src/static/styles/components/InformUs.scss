@@ -17,6 +17,7 @@
   &_title{
     color: #fff;
     font-size: 41px;
+    @include xs(font-size,33px);
   }
   &_description{
     color: #999999;
@@ -32,6 +33,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    @include xs(flex-direction, column);
+    @include xs( justify-content, center);
+    @include xs(align-items, center);
   }
   &_container{
       margin: 0 auto;
@@ -115,6 +119,7 @@
     @include Size(140,45);
     @include xs(width,115px);
     @include xs(height,35px);
+    @include xs(margin-top, 15px);
     &_link{
       line-height: 45px;
       color: #fff;
