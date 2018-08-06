@@ -5,5 +5,8 @@ $(document).ready(function () {
         $('body,html').animate({scrollTop: top}, 1500);
         return false;
     });
-    AOS.init();
+    AOS.init({
+        offset: 150,
+        once: true
+    });
 });
