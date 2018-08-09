@@ -19,6 +19,7 @@
   align-items: center;
   justify-content: center;
 }
+
 @mixin Size($a, $b:false){
     width:$a + px;
     @if($b) {
@@ -27,9 +28,6 @@
     @else {
       height: $a + px;
     }
-}
-body{
-  overflow-x: hidden;
 }
 .container{
  @include wrapper();

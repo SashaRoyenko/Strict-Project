@@ -1,10 +1,9 @@
 footer.footer
-    .footer__wrap.container
+    .footer__wrap.container(data-aos="slide-up" data-aos-delay="1200" data-aos-offset="-300" data-aos-duration="1300")
         p.footer_copyright
             | Copyright 2014, STRICT
         ul.SocialNetworks
             each val, index in ['facebook', 'twitter', 'gmail', 'linkedin']
                 li.SocialNetworks_item(class='SocialNetworks_item_' + val + '-hover')
-                    |
-                    |
-                    img.SocialNetworks_img(src='static/img/footer/' + val +'.png')
+                    a.SocialNetworks_link
+                        img.SocialNetworks_img(src='static/img/footer/' + val +'.png')
